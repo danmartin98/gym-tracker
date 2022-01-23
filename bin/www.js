@@ -4,8 +4,9 @@
  * Module dependencies.
  */
 import app from "../app.js";
+import debugImport from "debug";
+const debug = debugImport("gym-tracker:server");
 
-var debug = require("debug")("gym-tracker:server");
 import http from "http";
 
 /**
