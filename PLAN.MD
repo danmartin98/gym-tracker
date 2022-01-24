@@ -16,3 +16,19 @@
 - notification set up - booster - on sunday evening for example it would prompt you to plan your week, customizable
 - workouts, calander, settings
 -
+
+- MVP:
+
+- first page rendered would have buttons/ links to push a, pull a ect
+- take you to another page with all the exercies -
+- Bench press Weight
+  - set 1
+  - set 2
+
+PLAN:
+3 create table functions - script folder within db
+3 populate table functions
+make a data.js with the data in - 
+get request
+post request to add weight for exercise and set
+post request for removing an exercise - input value
