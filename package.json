@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node -r dotenv/config.js ./bin/www.js",
     "dev": "nodemon -r dotenv/config.js ./bin/www.js",
-    "dbsettable": "nodemon -r dotenv/config.js ./db/scripts/createSetTable.js"
+    "dbsettable": "nodemon -r dotenv/config db/scripts/createSetTable.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
