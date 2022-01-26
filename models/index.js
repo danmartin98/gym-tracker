@@ -1,0 +1,53 @@
+import query from "../db/index.js";
+
+export default async function getWorkouts() {
+  const sqlString = `SELECT * FROM workout;`;
+  const result = await query(sqlString);
+  console.log(result);
+  return result;
+}
+
+async function getWorkoutByDay(input) {
+  const sqlString = `SELECT * FROM workout WHERE day = $1;`;
+  const result = await query(sqlString, [input]);
+  return result;
+}
+
+async function getWorkoutByMuscleGroup(input) {
+  const sqlString = `SELECT * FROM workout WHERE muscle_group = $1;`;
+  const result = await query(sqlString, [input]);
+  return result;
+}
+
+async function getProgressByExercise(input) {
+  const sqlString = `SELECT * FROM userInput WHERE exercise = $1;`;
+  const result = await query(sqlString, [input]);
+  return result;
+}
+
+// POST
+async function postProgress(input) {
+  const sqlString = `INSERT INTO userInput (exercise, set, weight, comment, date) VALUES ($1, $2, $3, $4, $5) RETURNING *;`;
+  const exercise = input.exercise;
+  const set = input.set;
+  const weight = input.weight;
+  const comment = input.comment;
+  const date = input.date;
+  const result = await query(sqlString, [
+    exercise,
+    set,
+    weight,
+    comment,
+    date,
+    result,
+  ]);
+  return result;
+}
+
+// Date, set number(wouldnt be inputed), weight, comment - next button is what submits the post request
+// 3 seperate??
+// element.value - innerText property
+// for the comment - conditional statement, if blank, insert null
+
+// make a function that allows select from the database
+// select * from
