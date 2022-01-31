@@ -1,10 +1,9 @@
 import query from "../db/index.js";
 
- async function getWorkouts() {
-  const sqlString = `SELECT * FROM workout;`;
-  const result = await query(sqlString);
+async function getWorkouts() {
+  const result = await query(`SELECT * FROM workout;`);
   console.log(result);
-  return result;
+  return result.rows;
 }
 
 async function getWorkoutByDay(input) {
@@ -44,8 +43,13 @@ async function postProgress(input) {
   return result;
 }
 
-export {getWorkouts,getWorkoutByDay, getWorkoutByMuscleGroup, getProgressByExercise, postProgress};
-
+export {
+  getWorkouts,
+  getWorkoutByDay,
+  getWorkoutByMuscleGroup,
+  getProgressByExercise,
+  postProgress,
+};
 
 // Date, set number(wouldnt be inputed), weight, comment - next button is what submits the post request
 // 3 seperate??
