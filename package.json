@@ -8,7 +8,9 @@
     "dev": "nodemon -r dotenv/config.js ./bin/www.js",
     "dbsettable": "nodemon -r dotenv/config db/scripts/createSetTable.js",
     "dbuserinputtable": "nodemon -r dotenv/config db/scripts/createUserInputTable.js",
-    "dbworkouttable": "nodemon -r dotenv/config db/scripts/createWorkoutTable.js"
+    "dbworkouttable": "nodemon -r dotenv/config db/scripts/createWorkoutTable.js",
+    "dbpopulatetable": "nodemon -r dotenv/config db/scripts/populateWorkoutTable.js",
+    "dbqueryworkouttable": "nodemon -r dotenv/config db/scripts/queryWorkoutTable.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

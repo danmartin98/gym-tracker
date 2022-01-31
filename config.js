@@ -4,7 +4,7 @@ export const DB = {
   port: process.env.DBPORT,
   host: process.env.DBHOST,
   password: process.env.DBPASSWORD,
-  // connectionString: process.env.DATABASE_URL,
+  connectionString: process.env.DATABASE_URL,
 };
 
 export default DB;
