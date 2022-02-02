@@ -18,6 +18,13 @@ router.get("/:exercise", async function (req, res, next) {
   res.json({success: true, message:"Retrieved exercises based on inputted exercise.", payload: data});
 })
 
+/* GET WORKOUT BY DAY */
+router.get("/day/:day", async function (req, res, next) {
+  const day = req.params.day.toUpperCase();
+  console.log("This is the day:", day);
+  const data = await models.getWorkoutByDay(day);
+  res.json({success: true, message: "Retrieved workouts based on the day you inputted.", payload: data});
+})
 
 /*
  - get all the workout - DONE
