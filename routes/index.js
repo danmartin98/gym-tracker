@@ -26,6 +26,14 @@ router.get("/day/:day", async function (req, res, next) {
   res.json({success: true, message: "Retrieved workouts based on the day you inputted.", payload: data});
 })
 
+/* GET WORKOUT BY MUSCLE GROUP */
+router.get("/musclegroup/:musclegroup", async function (req, res, next) {
+  const muscleGroup = req.params.musclegroup;
+  console.log("This is the muscle group: ", muscleGroup);
+  const data = await models.getWorkoutByMuscleGroup(muscleGroup);
+  res.json({success: true, message: "Retrieved workouts based on muscle group.", payload: data});
+})
+
 /*
  - get all the workout - DONE
  - get workout by day
