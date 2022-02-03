@@ -14,9 +14,10 @@ async function getWorkoutByDay(input) {
 }
 
 async function getWorkoutByMuscleGroup(input) {
-  const sqlString = `SELECT * FROM workout WHERE muscle_group = $1;`;
+  const sqlString = `SELECT * FROM workout WHERE muscle_group LIKE '%' || $1 || '%';`;
   const result = await query(sqlString, [input]);
-  return result;
+  console.log("This is the result: ", result.rows)
+  return result.rows;
 }
 
 async function getWorkoutByExercise(input) {
