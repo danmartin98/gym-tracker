@@ -18,6 +18,13 @@ async function getWorkoutByMuscleGroup(input) {
   return result;
 }
 
+async function getWorkoutByExercise(input) {
+  const sqlString = `SELECT * FROM workout WHERE exercise LIKE '%' || $1 || '%';`;
+  const result = await query(sqlString, [input]);
+  console.log("Result:", result);
+  return result.rows;
+}
+
 async function getProgressByExercise(input) {
   const sqlString = `SELECT * FROM userInput WHERE exercise = $1;`;
   const result = await query(sqlString, [input]);
@@ -47,6 +54,7 @@ export {
   getWorkouts,
   getWorkoutByDay,
   getWorkoutByMuscleGroup,
+  getWorkoutByExercise,
   getProgressByExercise,
   postProgress,
 };
