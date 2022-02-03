@@ -34,15 +34,25 @@ router.get("/musclegroup/:musclegroup", async function (req, res, next) {
   res.json({success: true, message: "Retrieved workouts based on muscle group.", payload: data});
 })
 
+/* POST PROGRESS ROUTE */
+
+router.post("/", async function (req, res) {
+  const input = req.query;
+  console.log("This is the data: ", input);
+  const data = await models.postProgress(input);
+  console.log("This is the data: ", data);
+  res.json({success: true, message: "You've added the following entry to the database.", payload: data});
+})
+
 /*
  - get all the workout - DONE
- - get workout by day
- - get w. by muscle group
+ - get workout by day - DONE
+ - get w. by muscle group - DONE
  - get progress by exercise 
 */
 
 /*
-- post pogress
+- post pogress - DONE
 */
 
 export default router;
