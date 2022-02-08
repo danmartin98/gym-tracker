@@ -332,7 +332,7 @@ const workout = [
       "https://images.everydayhealth.com/images/how-to-train-if-you-have-an-ectomorph-body-type-722x406.jpg?sfvrsn=16febb96_1",
   },
   {
-    day: "LEGS A",
+    day: "LEGS B",
     muscleGroup: "legs",
     exercise: "Barbell Squat",
     sets: 5,
@@ -343,7 +343,7 @@ const workout = [
       "https://images.everydayhealth.com/images/how-to-train-if-you-have-an-ectomorph-body-type-722x406.jpg?sfvrsn=16febb96_1",
   },
   {
-    day: "LEGS A",
+    day: "LEGS B",
     muscleGroup: "legs",
     exercise: "Leg Press",
     sets: 3,
@@ -354,7 +354,7 @@ const workout = [
       "https://images.everydayhealth.com/images/how-to-train-if-you-have-an-ectomorph-body-type-722x406.jpg?sfvrsn=16febb96_1",
   },
   {
-    day: "LEGS A",
+    day: "LEGS B",
     muscleGroup: "legs",
     exercise: "Calf Raise",
     sets: 5,
@@ -365,7 +365,7 @@ const workout = [
       "https://images.everydayhealth.com/images/how-to-train-if-you-have-an-ectomorph-body-type-722x406.jpg?sfvrsn=16febb96_1",
   },
   {
-    day: "LEGS A",
+    day: "LEGS B",
     muscleGroup: "legs",
     exercise: "Leg Curl",
     sets: 5,
@@ -376,7 +376,7 @@ const workout = [
       "https://images.everydayhealth.com/images/how-to-train-if-you-have-an-ectomorph-body-type-722x406.jpg?sfvrsn=16febb96_1",
   },
   {
-    day: "LEGS A",
+    day: "LEGS B",
     muscleGroup: "legs",
     exercise: "Leg Extension",
     sets: 5,
