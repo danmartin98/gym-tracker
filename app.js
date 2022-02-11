@@ -2,9 +2,13 @@ import createError from "http-errors";
 import express from "express";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
+import cors from "cors";
+
 
 import router from "./routes/index.js";
 let app = express();
+
+app.use(cors())
 
 // view engine setup
 // app.set("views", path.join(__dirname, "views"));
