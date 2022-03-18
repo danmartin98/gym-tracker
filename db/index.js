@@ -1,6 +1,6 @@
 import pg from "pg";
 import DB from "../config.js";
-
+// Check .env for chaange
 const pool = new pg.Pool({
   connectionString: DB.connectionString,
   // host: DB.host,
